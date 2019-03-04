@@ -37,19 +37,16 @@
   box-sizing: border-box;
 }
 
-html {
+body {
+  margin: 0;
+  padding: 0;
   color: #333;
   font-family: "Open Sans";
   line-height: 1.5;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom, #e0e0e0, #c5c5c5, #ababab, #919191, #787878);
-}
-
-body {
-  margin: 0;
-  padding: 0;
+  background-image: linear-gradient(to bottom, #e0e0e0, #c5c5c5, #ababab, #919191, #787878) !important;
 }
 
 .wrapper_guide {
@@ -64,7 +61,7 @@ body {
 header {
   align-items: center;
   border-bottom: 5px solid #73471d;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   padding: 10px 0;
 }
@@ -77,6 +74,7 @@ header ul {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  margin: 0 !important; 
   padding: 0;
 }
 
@@ -85,12 +83,12 @@ header ul {
 }
 
 header a {
-  color: #856447;
+  color: #856447 !important;
   font-family: "Arvo";
   font-size: 40px;
   font-weight: bold;
   position: relative;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 header a:hover:after, .active_link:after {
@@ -109,6 +107,7 @@ header a:hover:after, .active_link:after {
   color: #73471d;
   font-family: "Arvo";
   font-size: 45px;
+  font-weight: bold;
   margin: 0;
   text-align: center;
 }
@@ -129,20 +128,24 @@ header a:hover:after, .active_link:after {
    animation-fill-mode: forwards;
  }
 
+ h1 {
+   font-size: 32px !important;
+   font-weight: bold !important;
+   line-height: 1.5 !important;
+ }
+
  h1, h2 {
+   margin: 0 !important;
+   font-family: "Arvo" !important;
    text-align: center;
-   margin: 0;
  }
 
  p {
+   font-family: inherit !important;
    margin-bottom: 20px;
-   font-weight: 600;
+   font-weight: bold !important;
  }
 
-#video_title {
-  text-align: center;
-  font-family: 'Arvo';
-}
 
 #video_container {
   max-width: 1100px;
@@ -165,41 +168,15 @@ header a:hover:after, .active_link:after {
   padding: 20px 0;
 }
 
-#images {
-  align-items: center;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
+
+#images_container img {
+  display: block;
+  margin: auto;
+  height: 500px;
+  width: auto !important;
 }
 
-#images img {
-  width: 100%;
-  animation-name: fade-in;
-  animation-fill-mode: forwards;
-}
-
-#images img:nth-child(1) {
-  animation-duration: 1s;
-}
-
-#images img:nth-child(2) {
-  animation-duration: 6s;
-}
-
-#images img:nth-child(3) {
-  animation-duration: 10s;
-}
-
-#images img:nth-child(4) {
-  animation-duration: 15s;
-}
-
-#images img:nth-child(5) {
-  animation-duration: 19s;
-}
-
-
-#images img:hover {
+#images_container img:hover {
   transform: scale(1.4);
   position: relative; 
   z-index: 5;
