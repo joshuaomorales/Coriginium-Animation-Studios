@@ -33,6 +33,10 @@
   font-weight: lighter;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   color: #333;
   font-family: "Open Sans";
@@ -48,7 +52,7 @@ body {
 }
 
 .wrapper_guide {
-  width: 1000px;
+  width: 1280px;
   margin: auto;
 }
 
@@ -100,8 +104,6 @@ header a:hover:after, .active_link:after {
   width: 30px;
 }
 
-
-
 #title {
   color: #73471d;
   font-family: "Arvo";
@@ -121,6 +123,9 @@ header a:hover:after, .active_link:after {
 
  main {
    padding: 30px 0;
+   animation-name: fade-in;
+   animation-duration: 500ms;
+   animation-fill-mode: forwards;
  }
 
  h1, h2 {
@@ -134,9 +139,19 @@ header a:hover:after, .active_link:after {
 
 #video_title {
   text-align: center;
+  font-family: 'Arvo';
+}
+
+#video_container {
+  max-width: 1100px;
+  margin: auto;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 #video_container video {
+  border: 30px solid #535253;
   width: 100%;
 }
 
@@ -149,9 +164,47 @@ header a:hover:after, .active_link:after {
 }
 
 #images {
+  align-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
+#images img {
+  width: 100%;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+}
+
+
+#images img:nth-child(1) {
+  animation-duration: 1s;
+}
+
+#images img:nth-child(2) {
+  animation-duration: 6s;
+}
+
+#images img:nth-child(3) {
+  animation-duration: 10s;
+}
+
+#images img:nth-child(4) {
+  animation-duration: 15s;
+}
+
+#images img:nth-child(5) {
+  animation-duration: 19s;
+}
+
+
+#images img:hover {
+  transform: scale(1.4);
+  position: relative; 
+  z-index: 5;
+  transition: transform 300ms ease;
+}
+
 
 /*
   About
@@ -182,10 +235,7 @@ header a:hover:after, .active_link:after {
 
 footer {
   border-top: 5px solid #87623c;
-  padding-bottom: 50px;
 }
-
-
 
 #copyright {
   padding: 20px 0;
@@ -195,3 +245,26 @@ footer {
 /* ========
   FOOTER END
  ======== */
+
+ @media screen and (max-width: 1100px) {
+  .wrapper_guide {
+    width: 900px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  .wrapper_guide {
+    width: 90vw;
+  }
+ }
+
+
+ @keyframes fade-in {
+   0% {
+     opacity: 0;
+   }
+
+   100% {
+     opacity: 1;
+   }
+ }
