@@ -176,7 +176,6 @@ header a:hover:after, .active_link:after {
   animation-fill-mode: forwards;
 }
 
-
 #images img:nth-child(1) {
   animation-duration: 1s;
 }
