@@ -44,6 +44,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to bottom, #e0e0e0, #c5c5c5, #ababab, #919191, #787878);
 }
 
 body {
@@ -86,22 +87,22 @@ header ul {
 header a {
   color: #856447;
   font-family: "Arvo";
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
   position: relative;
   text-decoration: none;
 }
 
 header a:hover:after, .active_link:after {
-  background-color: #a5a5a5;
+  background-color: #74471c;
   content: "";
   position: absolute;
-  height: 3px;
+  height: 5px;
   left: 0;
   margin: auto;
   right: 0;
   bottom: -5px;
-  width: 30px;
+  width: 50px;
 }
 
 #title {
@@ -135,6 +136,7 @@ header a:hover:after, .active_link:after {
 
  p {
    margin-bottom: 20px;
+   font-weight: 600;
  }
 
 #video_title {
