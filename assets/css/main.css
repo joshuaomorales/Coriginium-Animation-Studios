@@ -34,7 +34,12 @@
 }
 
 html {
+  color: #333;
   font-family: "Open Sans";
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -42,6 +47,152 @@ body {
   padding: 0;
 }
 
-#title {
-  font-family: "Arvo";
+.wrapper_guide {
+  width: 1000px;
+  margin: auto;
 }
+
+/* ========
+  HEADER START
+ ======== */
+
+header {
+  align-items: center;
+  border-bottom: 5px solid #73471d;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+header nav {
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+#logo {
+  height: 150px;
+}
+
+header a {
+  color: #856447;
+  font-family: "Arvo";
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+}
+
+header a:hover:after, .active_link:after {
+  background-color: #a5a5a5;
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  margin: auto;
+  right: 0;
+  bottom: -5px;
+  width: 30px;
+}
+
+
+
+#title {
+  color: #73471d;
+  font-family: "Arvo";
+  font-size: 45px;
+  margin: 0;
+  text-align: center;
+}
+
+
+/* ========
+  HEADER END
+ ======== */
+
+ /* ========
+  MAIN START
+ ======== */
+
+ main {
+   padding: 30px 0;
+ }
+
+ h1, h2 {
+   text-align: center;
+   margin: 0;
+ }
+
+ p {
+   margin-bottom: 20px;
+ }
+
+#video_title {
+  text-align: center;
+}
+
+#video_container video {
+  width: 100%;
+}
+
+/*
+  Gallery
+*/
+
+#images_container {
+  padding: 20px 0;
+}
+
+#images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/*
+  About
+*/
+
+#author_name {
+  text-align: center;
+}
+
+#about_author_container img {
+  display: block;
+  margin: auto;
+}
+
+#map_location {
+  text-align: center;
+}
+
+
+ /* ========
+  MAIN END
+ ======== */
+
+
+ /* ========
+  FOOTER START
+ ======== */
+
+footer {
+  border-top: 5px solid #87623c;
+  padding-bottom: 50px;
+}
+
+
+
+#copyright {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* ========
+  FOOTER END
+ ======== */
