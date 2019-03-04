@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Arvo";
+  src: url("../font/Arvo-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Arvo";
+  src: url("../font/Arvo-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans-ExtraBold.ttf");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans-Light.ttf");
+  font-weight: lighter;
+}
+
+html {
+  font-family: "Open Sans";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#title {
+  font-family: "Arvo";
+}
